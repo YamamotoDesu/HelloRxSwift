@@ -1,6 +1,10 @@
 # HelloRxSwift
 
 ## Observable
+* "just" is an observable sequence containing the single specified element.
+* "of" operator is used to create an observables array or an observable of individual type.
+* "from" operator creates an observable of individual type from an array of elements.
+
 ```swift
 import RxSwift
 
