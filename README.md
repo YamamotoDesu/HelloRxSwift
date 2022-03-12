@@ -1,8 +1,8 @@
 # HelloRxSwift
-The heart of the RxSwift framework is based on observable which is also known as a sequence.
-Observable is the sequence of data or events which can be subscribed and can be extended by applying different Rx operators like map, filter, flatMap, etc.
-It can receive data asynchronously.
-You can create an observable sequence of any Object that conforms to the Sequence protocol (A type that provides sequential, iterated access to its elements).
+The heart of the RxSwift framework is based on observable which is also known as a sequence.  
+Observable is the sequence of data or events which can be subscribed and can be extended by applying different Rx operators like map, filter, flatMap, etc.  
+It can receive data asynchronously.  
+You can create an observable sequence of any Object that conforms to the Sequence protocol (A type that provides sequential, iterated access to its elements).  
 
 ## ■ Observable
 ### 1. "just" is an observable sequence containing the single specified element.
