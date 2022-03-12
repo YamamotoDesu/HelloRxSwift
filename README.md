@@ -162,7 +162,7 @@ subject.subscribe {
 ```
 -----
 
-## ■ Variable
+## ■ Variable(Old)
 ```swift
 import RxSwift
 
