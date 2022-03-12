@@ -5,7 +5,7 @@ The heart of the RxSwift framework is based on observable which is also known as
 ## ■ Observable
 Observable is the sequence of data or events which can be subscribed and can be extended by applying different Rx operators like map, filter, flatMap, etc.  
 It can receive data asynchronously.  
-### 1. just is an observable sequence containing the single specified element.
+### 1. 'just' is an observable sequence containing the single specified element.
 
 ```swift
 import RxSwift
@@ -13,7 +13,7 @@ import RxSwift
 let obervable = Observable.just(1)
 
 ```
-### 2. "of" operator is used to create an observables array or an observable of individual type.
+### 2. 'of' operator is used to create an observables array or an observable of individual type.
 We have created observables but we need to subscribe to the observables.   
 An observable won’t send events until it has a subscriber.  
 ```swift
@@ -59,7 +59,7 @@ Observable<String>.create { observer in
 
 ```
 
-## 3. "from" operator creates an observable of individual type from an array of elements.
+## 3. 'from' operator creates an observable of individual type from an array of elements.
 
 ```swift
 import RxSwift
