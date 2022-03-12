@@ -157,7 +157,8 @@ subject.onNext("Issue 1")
 ```
 
 -----
-## ■ ReplaySubject
+## ■ ReplaySubject 
+Initialized with buffer size and will maintain a buffer of elements up to that size and replay it to new subscribers.  
 ```swift
 import RxSwift
 
