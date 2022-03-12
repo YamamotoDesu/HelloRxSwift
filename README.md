@@ -5,6 +5,7 @@ The heart of the RxSwift framework is based on observable which is also known as
 ## ■ Observable
 Observable is the sequence of data or events which can be subscribed and can be extended by applying different Rx operators like map, filter, flatMap, etc.  
 It can receive data asynchronously.  
+
 ### 1. `just` is an observable sequence containing the single specified element.
 
 ```swift
@@ -14,8 +15,6 @@ let obervable = Observable.just(1)
 
 ```
 ### 2. `of` operator is used to create an observables array or an observable of individual type.
-We have created observables but we need to subscribe to the observables.   
-An observable won’t send events until it has a subscriber.  
 ```swift
 import RxSwift
 let observale2 = Observable.of(1, 2, 3)
@@ -88,6 +87,16 @@ let subscription4 = observable4.subscribe(onNext: { element in
 subscription4.dispose()
 
 ```
+
+### The Subscribe is how you connect an observer to an Observable.
+We have created observables but we need to subscribe to the observables.   
+An observable won’t send events until it has a subscriber.  
+`onNext` This method is called whenever the Observable emits an item. 
+This method takes as a parameter the item emitted by the Observable. When a value is added to an observable it will send the next event to its subscribers.
+
+`onError` This method is called whenever an error event is emitted indicating that it has failed to generate the expected data or has encountered some other error. Further calls to onNext or onCompletedare not made. The method returns the details of the error. This will terminate the observable sequence.
+
+`onCompleted` This method after observable has emitted all the events and sends a completed event to its subscribers. This method is not called if any error event has encountered.
 
 -----
 
