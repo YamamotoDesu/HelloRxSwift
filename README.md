@@ -190,6 +190,9 @@ subject.subscribe {
 -----
 
 ## ■ BehaviorRelay
+It lies in RxCocoa, so you need to import RxCocoa.  
+You can add values to BehaviorRelay using the .accept method.  
+Relay that emits the most recent item it has observed and all subsequent observed items to each subscribed observer.  
 ```swift
 import RxSwift
 import RxCocoa
