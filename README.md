@@ -189,38 +189,6 @@ subject.subscribe {
 ```
 -----
 
-## ■ Variable(OLD)
-```swift
-import RxSwift
-
-let disposeBag = DisposeBag()
-
-let variable = Variable("Initial value")
-
-variable.value = "Hello World"
-
-variable.asObservable()
-    .subscribe {
-        print($0)
-        // > next(Hello World)
-    }
-
-
-let variable2 = Variable([String]())
-
-variable2.value.append("Item 1")
-
-variable2.asObservable()
-    .subscribe {
-        print($0)
-        // > next(["Item 1"])
-        // > next(["Item 1", "Item 2"])
-    }
-
-variable2.value.append("Item 2")
-```
-
------
 ## ■ BehaviorRelay
 ```swift
 import RxSwift
@@ -263,3 +231,39 @@ relay3.asObservable()
         // > next(["Item 1", "Item 2", "Item 3"])
     }
 ```
+
+-----
+
+## ■ Variable(OLD)
+BehaviorRelay replaced RxSwift’s Variable as a variable is deprecated.
+```swift
+import RxSwift
+
+let disposeBag = DisposeBag()
+
+let variable = Variable("Initial value")
+
+variable.value = "Hello World"
+
+variable.asObservable()
+    .subscribe {
+        print($0)
+        // > next(Hello World)
+    }
+
+
+let variable2 = Variable([String]())
+
+variable2.value.append("Item 1")
+
+variable2.asObservable()
+    .subscribe {
+        print($0)
+        // > next(["Item 1"])
+        // > next(["Item 1", "Item 2"])
+    }
+
+variable2.value.append("Item 2")
+```
+
+
