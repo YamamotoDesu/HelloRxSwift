@@ -98,6 +98,12 @@ This method takes as a parameter the item emitted by the Observable. When a valu
 
 `onCompleted` This method after observable has emitted all the events and sends a completed event to its subscribers. This method is not called if any error event has encountered.
 
+## Disposing and terminating  
+When we create a subscription it returns you a subscriber and that subscriber will always be listening or observing that particular observable sequence. So we need to make sure that we dispose of those subscribers.  
+A memory leak may occur if we don’t expose those subscribers.  
+You can add the subscription to a Disposebag which will cancel the subscription for you automatically.  
+`dispose()` is used to cancel the subscription manually and free resources.
+
 -----
 
 ## ■ PublishSubject
