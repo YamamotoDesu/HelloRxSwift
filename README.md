@@ -137,7 +137,7 @@ subject.onNext("Issue 4")
 
 ## ■ BehaviorSubject  
 Starts with an initial value and replays it or the latest element to new subscribers.  
-In other words, it replays the latest .next event to new subscribers.  
+In other words, it replays the latest `.next` event to new subscribers.  
 ```swift
 import RxSwift
 
