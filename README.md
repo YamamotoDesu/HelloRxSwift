@@ -106,7 +106,10 @@ You can add the subscription to a Disposebag which will cancel the subscription 
 
 -----
 
-## ■ PublishSubject
+## ■ PublishSubject  
+Starts empty and only emits new elements to subscribers.  
+Publish Subjects are used when you want subscribers to be notified of new events from the point at which they subscribed until the subject has terminated or they either unsubscribe.
+
 ```swift
 import RxSwift
 
