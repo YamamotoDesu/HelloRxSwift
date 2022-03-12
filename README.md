@@ -83,6 +83,8 @@ subscription4.dispose()
 
 ```
 
+-----
+
 ## PublishSubject
 ```swift
 import RxSwift
@@ -107,6 +109,8 @@ subject.onCompleted()
 subject.onNext("Issue 4")
 ```
 
+-----
+
 ## BehaviorSubject
 ```swift
 import RxSwift
@@ -126,6 +130,7 @@ subject.subscribe { event in
 subject.onNext("Issue 1")
 ```
 
+-----
 ## ReplaySubject
 ```swift
 import RxSwift
@@ -155,6 +160,7 @@ subject.subscribe {
     // > next(Issue 6)
 }
 ```
+-----
 
 ## Variable
 ```swift
@@ -187,6 +193,7 @@ variable2.asObservable()
 variable2.value.append("Item 2")
 ```
 
+-----
 ## BehaviorRelay
 ```swift
 import RxSwift
