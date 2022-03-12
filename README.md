@@ -1,28 +1,19 @@
 # HelloRxSwift
 
 ## Observable
-* "just" is an observable sequence containing the single specified element.
-* "of" operator is used to create an observables array or an observable of individual type.
-* "from" operator creates an observable of individual type from an array of elements.
+### 1. "just" is an observable sequence containing the single specified element.
 
 ```swift
 import RxSwift
 
 let obervable = Observable.just(1)
+
+```
+### 2. "of" operator is used to create an observables array or an observable of individual type.
+```swift
+import RxSwift
 let observale2 = Observable.of(1, 2, 3)
 let observale3 = Observable.of([1,2,3])
-let observable4 = Observable.from([1, 2, 3, 4, 5])
-
-observable4.subscribe { event in
-    if let element = event.element {
-        print(element)
-        //> 1
-        //> 2
-        //> 3
-        //> 4
-        //> 5
-    }
-}
 
 observale3.subscribe { event in
     if let element = event.element {
@@ -31,19 +22,9 @@ observale3.subscribe { event in
     }
 }
 
-let subscription4 = observable4.subscribe(onNext: { element in
-    print(element)
-    //> 1
-    //> 2
-    //> 3
-    //> 4
-    //> 5
-})
-
-subscription4.dispose()
-
 ```
 
+```swift
 ```swift
 import RxSwift
 
@@ -70,6 +51,36 @@ Observable<String>.create { observer in
               // > A
               // > Completed
               // > Disposed
+
+```
+
+## 3. "from" operator creates an observable of individual type from an array of elements.
+
+```swift
+import RxSwift
+let observable4 = Observable.from([1, 2, 3, 4, 5])
+
+observable4.subscribe { event in
+    if let element = event.element {
+        print(element)
+        //> 1
+        //> 2
+        //> 3
+        //> 4
+        //> 5
+    }
+}
+
+let subscription4 = observable4.subscribe(onNext: { element in
+    print(element)
+    //> 1
+    //> 2
+    //> 3
+    //> 4
+    //> 5
+})
+
+subscription4.dispose()
 
 ```
 
