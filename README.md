@@ -25,7 +25,6 @@ observale3.subscribe { event in
 ```
 
 ```swift
-```swift
 import RxSwift
 
 let disposeBag = DisposeBag()
