@@ -14,8 +14,8 @@ let obervable = Observable.just(1)
 
 ```
 ### 2. "of" operator is used to create an observables array or an observable of individual type.
-We have created observables but we need to subscribe to the observables. 
-An observable won’t send events until it has a subscriber.
+We have created observables but we need to subscribe to the observables.   
+An observable won’t send events until it has a subscriber.  
 ```swift
 import RxSwift
 let observale2 = Observable.of(1, 2, 3)
