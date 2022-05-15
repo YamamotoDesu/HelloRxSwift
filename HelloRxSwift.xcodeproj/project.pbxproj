@@ -32,7 +32,16 @@
 		7B122E2127D8F133004737CA /* BehaviorSubject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BehaviorSubject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7B122E2227DAB0E7004737CA /* ReplaySubject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReplaySubject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7B122E2327DAB323004737CA /* Variables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Variables.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		7B122E5327DAFE65004737CA /* BehaviorRelay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = BehaviorRelay.playground; path = ../../BehaviorRelay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7B122E5427DB0491004737CA /* BehaviorRelay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = BehaviorRelay.playground; path = ../../BehaviorRelay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD101F2830F0D900390B8D /* IgnoreElements.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IgnoreElements.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD10212830F7A600390B8D /* ElementAt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ElementAt.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD10222830F84E00390B8D /* Filter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD10232830FF1C00390B8D /* Skip.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Skip.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD10242831025300390B8D /* SkipWhile.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SkipWhile.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD1025283105A600390B8D /* SkipUntil.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SkipUntil.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD10262831096F00390B8D /* Take.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Take.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD102728310A7C00390B8D /* TakeWhile.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TakeWhile.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7BBD1028283112AE00390B8D /* TakeUntil.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TakeUntil.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D2DF752A72C522DA93050042 /* Pods-HelloRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.release.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		D96C8D8708BC225277EE4B06 /* Pods-HelloRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +96,7 @@
 		7B122E0927D8D509004737CA /* HelloRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				7B122E5327DAFE65004737CA /* BehaviorRelay.playground */,
+				7B122E5427DB0491004737CA /* BehaviorRelay.playground */,
 				7B122E2327DAB323004737CA /* Variables.playground */,
 				7B122E2227DAB0E7004737CA /* ReplaySubject.playground */,
 				7B122E2127D8F133004737CA /* BehaviorSubject.playground */,
@@ -101,6 +110,15 @@
 				7B122E1327D8D50B004737CA /* Assets.xcassets */,
 				7B122E1527D8D50B004737CA /* LaunchScreen.storyboard */,
 				7B122E1827D8D50B004737CA /* Info.plist */,
+				7BBD101F2830F0D900390B8D /* IgnoreElements.playground */,
+				7BBD10212830F7A600390B8D /* ElementAt.playground */,
+				7BBD10222830F84E00390B8D /* Filter.playground */,
+				7BBD10232830FF1C00390B8D /* Skip.playground */,
+				7BBD10242831025300390B8D /* SkipWhile.playground */,
+				7BBD1025283105A600390B8D /* SkipUntil.playground */,
+				7BBD10262831096F00390B8D /* Take.playground */,
+				7BBD102728310A7C00390B8D /* TakeWhile.playground */,
+				7BBD1028283112AE00390B8D /* TakeUntil.playground */,
 			);
 			path = HelloRxSwift;
 			sourceTree = "<group>";
