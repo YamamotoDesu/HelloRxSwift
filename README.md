@@ -269,4 +269,187 @@ variable2.asObservable()
 variable2.value.append("Item 2")
 ```
 
+# Filtering Operators 
 
+## IgnoreElements
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let strikes = PublishSubject<String>()
+
+let disposeBag = DisposeBag()
+
+strikes
+    .ignoreElements()
+    .subscribe { _ in
+        print("[Subsctiption is called]")
+    }
+    .disposed(by: disposeBag)
+
+strikes.onNext("A")
+strikes.onNext("B")
+strikes.onNext("C")
+
+strikes.onCompleted() //[Subsctiption is called]
+
+
+```
+
+## ElementAt
+```swift
+
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let strikes = PublishSubject<String>()
+let disposeBag = DisposeBag()
+
+strikes.elementAt(2)
+    .subscribe(onNext: { _ in
+        print("You are out")
+    }).disposed(by: disposeBag)
+
+strikes.onNext("X")
+strikes.onNext("X")
+strikes.onNext("X") // You are out
+
+
+```
+
+## Filter 
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+Observable.of(1,2,3,4,5,6,7)
+    .filter { $0 % 2 == 0}
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag) // 2 4 6
+
+
+```
+
+## Skip
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+Observable.of("A", "B", "C", "D", "E", "F")
+    .skip(3)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag) // D E F
+
+
+```
+
+## SkipWhile
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+Observable.of(2, 2, 3, 4, 4, 2)
+    .skipWhile { $0 % 2 == 0 }
+    .subscribe(onNext : {
+        print($0)
+    }).disposed(by: disposeBag) // 3 4 4 2
+
+
+```
+
+
+## SkipUnitil
+```swift
+
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+let subject = PublishSubject<String>()
+let trigger = PublishSubject<String>()
+
+subject.skipUntil(trigger)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+
+subject.onNext("A")
+subject.onNext("B")
+
+trigger.onNext("X")
+
+subject.onNext("C") // C
+```
+
+## Take 
+```swift 
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+Observable.of(1,2,3,4,5,6)
+    .take(3)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag) // 1 2 3
+
+```
+
+## TakeWhile
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+Observable.of(2,4,6,7,8,10)
+    .takeWhile {
+        return $0 % 2 == 0
+    }.subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag) // 2 4 6
+
+```
+
+## TakeUntil
+```swift
+import UIKit
+import RxSwift
+import PlaygroundSupport
+
+let disposeBag = DisposeBag()
+
+let subject = PublishSubject<String>()
+let trigger = PublishSubject<String>()
+
+subject.takeUntil(trigger)
+    .subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+
+subject.onNext("1") // 1
+subject.onNext("2") // 2
+
+trigger.onNext("X")
+
+subject.onNext("3")
+
+```
