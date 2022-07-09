@@ -453,3 +453,18 @@ trigger.onNext("X")
 subject.onNext("3")
 
 ```
+
+## Transforming Operators
+```swift
+import UIKit
+import RxSwift
+
+let disposeBag = DisposeBag()
+
+let observable = Observable.of(1,2,3,4,5).toArray().asObservable()
+
+observable.subscribe(onNext: {
+    print($0) // [1, 2, 3, 4, 5]
+}).disposed(by: disposeBag)
+    
+```
